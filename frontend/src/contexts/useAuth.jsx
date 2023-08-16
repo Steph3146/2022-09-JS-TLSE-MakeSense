@@ -21,7 +21,7 @@ export function AuthProvider({ children }) {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // reconnexion peuple user
+    // reconnexion user
     if (
       !user.email &&
       document.cookie.match(
@@ -65,14 +65,12 @@ export function AuthProvider({ children }) {
     setUser(data);
     navigate("/user/decisions", { replace: true });
   };
-
   const logout = () => {
     document.cookie =
       "makesense_access_token= ; expires = Thu, 01 Jan 1970 00:00:00 GMT";
     setUser("user", null);
     navigate("/", { replace: true });
   };
-
   const value = useMemo(
     () => ({
       user,
