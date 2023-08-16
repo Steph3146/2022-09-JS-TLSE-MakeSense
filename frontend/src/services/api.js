@@ -16,7 +16,6 @@ function api() {
         ?.split("=Bearer%20")[1];
     }
   };
-
   const apigetmysql = async (url) => {
     checktoken();
     const res = await fetch(url, {
@@ -31,7 +30,6 @@ function api() {
     // eslint-disable-next-line no-return-await
     return await res.json();
   };
-
   const apipostmysql = async (url, body) => {
     checktoken();
     const res = await fetch(url, {
@@ -44,9 +42,8 @@ function api() {
       body: JSON.stringify(body), // body data type must match "Content-Type" header
       credentials: "include",
     });
-    return await res;
+    return res;
   };
-
   const apiputmysql = async (url, body) => {
     checktoken();
     const res = await fetch(url, {
@@ -59,9 +56,8 @@ function api() {
       body: JSON.stringify(body), // body data type must match "Content-Type" header
       credentials: "include",
     });
-    return await res;
+    return res;
   };
-
   const apideletemysql = async (url, body) => {
     checktoken();
     const res = await fetch(url, {
@@ -74,9 +70,8 @@ function api() {
       body: JSON.stringify(body), // body data type must match "Content-Type" header
       credentials: "include",
     });
-    return await res;
+    return res;
   };
-
   return {
     apigetmysql,
     apipostmysql,
