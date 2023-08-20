@@ -10,14 +10,16 @@
     "dev-front": "npm --prefix ./frontend run dev",
     "dev-back": "npm --prefix ./backend run dev",
     "lint": "npm --prefix ./frontend run lint && npm --prefix ./backend run lint",
-    "fix": "npm --prefix ./frontend run fix && npm --prefix ./backend run fix"
+    "fix": "npm --prefix ./frontend run fix && npm --prefix ./backend run fix",
+    "test": "jest"
   },
   "keywords": [],
   "author": "Wild Code School",
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^7.0.0",
-    "husky": "^7.0.0"
+    "husky": "^7.0.0",
+    "jest": "^29.6.2"
   },
   "dependencies": {
     "@makesenseorg/design-system": "^1.16.3",
