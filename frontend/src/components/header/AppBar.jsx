@@ -41,7 +41,7 @@ function AppBar({ menu }) {
           <button
             type="button"
             onClick={() => {
-              navigate(`/user/decisions`);
+              navigate("/user/decisions");
             }}
           >
             <img
@@ -74,7 +74,7 @@ function AppBar({ menu }) {
               type="button"
               className="text-white bg-calypso hover:bg-calypsoLight font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
               onClick={() => {
-                navigate(`/user/decisions?comp=Form`);
+                navigate("/user/decisions?comp=Form");
               }}
             >
               <Text tid="add" />
@@ -116,7 +116,7 @@ function AppBar({ menu }) {
                       <button
                         type="button"
                         onClick={() => {
-                          navigate(`/user/decisions`);
+                          navigate("/user/decisions", { replace: true });
                           setUserMenu(false);
                         }}
                         className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
