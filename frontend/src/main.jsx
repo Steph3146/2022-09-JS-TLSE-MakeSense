@@ -7,9 +7,9 @@ import { AuthProvider } from "./contexts/useAuth";
 import App from "./App";
 import "./index.css";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const routes = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(
+routes.render(
   <React.StrictMode>
     <LanguageProvider>
       <FolderProvider>

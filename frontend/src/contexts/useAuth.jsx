@@ -2,7 +2,7 @@ import { createContext, useContext, useMemo, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 // eslint-disable-next-line import/no-cycle
-import { LoadUser } from "./functions/ReconnectApi";
+import { LoadUser } from "./functions/ConnectApi";
 
 const AuthContext = createContext();
 export const useAuth = () => {
@@ -21,7 +21,7 @@ export function AuthProvider({ children }) {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // reconnexion user
+    // connexion user
     if (
       !user.email &&
       document.cookie.match(
